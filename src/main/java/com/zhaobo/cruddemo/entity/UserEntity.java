@@ -13,9 +13,14 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserEntity implements Serializable {
-
+//加了(strategy = GenerationType.IDENTITY)
+//
+//根据底层数据库自动选择方式，需要底层数据库的设置
+//
+//如MySQL，会使用自增字段，需要将主键设置成auto_increment
+// 没添加之前报Table 'test.hibernate_sequence' doesn't exist错
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "t_id")
     private Long t_id;
 
@@ -30,5 +35,8 @@ public class UserEntity implements Serializable {
 
     @Column(name = "t_pwd")
     private String t_pwd;
+
+    @Column(name = "t_pic")
+    private String t_pic;
 
 }

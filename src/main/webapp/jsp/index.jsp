@@ -23,8 +23,8 @@
 
     <form class="form-signin" action="${ctx}/user/login" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="" name="t_name">
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="" name="t_name">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="t_pwd">
         <div class="checkbox">
@@ -33,6 +33,7 @@
             </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <a href="${ctx}/jsp/signup.jsp" style="text-decoration: none"><button class="btn btn-lg btn-info btn-block" type="button" >Sign up</button></a>
     </form>
     ${requestScope.message}<br>
     ${requestScope.time}

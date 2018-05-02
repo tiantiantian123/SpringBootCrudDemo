@@ -11,7 +11,7 @@ public class cruddemoConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/zhaobo/cruddemo/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/zhaobo/cruddemo/**").addResourceLocations("classpath:/resources/static/");
     }
 //定义了默认不加后缀首页为index.jsp
     @Override

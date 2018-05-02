@@ -29,6 +29,8 @@
     <li role="presentation"><a href="#" onclick="addclass()">age:${sessionScope.user.t_age}</a></li>
     <li role="presentation"><a href="#" onclick="addclass()">address:${sessionScope.user.t_address}</a></li>
 </ul>
+
+<img src="${ctx.concat('/static/img/').concat(user.t_name).concat('.jpg')}"/>
 <div style="margin-top: 2%">
     <button type="button" class="btn btn-default"><a href="${ctx}/jsp/home.jsp"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Personal Page</a></button>
 </div>
