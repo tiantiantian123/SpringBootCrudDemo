@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 
 @Controller
-public class SignController {
+public class SignController extends BaseController{
 
     @Autowired
     private UserJPA userJPA;
@@ -27,8 +27,8 @@ public class SignController {
                          @RequestParam(value="t_pwd") String password,
                          @RequestParam(value = "t_address") String addr,
                          @RequestParam(value = "t_age") int age,
-                         @RequestParam(value="t_pic")MultipartFile file,
-                         HttpServletRequest request) {
+                         @RequestParam(value="t_pic")MultipartFile file
+                         ) {
         UserEntity user = new UserEntity();
         user.setT_name(name);
         user.setT_pwd(password);

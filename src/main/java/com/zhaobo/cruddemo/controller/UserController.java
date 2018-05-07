@@ -21,7 +21,7 @@ import java.util.Date;
 
 @Controller
 @RequestMapping(value = "/user")
-public class UserController {
+public class UserController extends BaseController{
 
 
 
@@ -34,7 +34,7 @@ public class UserController {
 
 
     @RequestMapping(value = "/login")
-    public String login(HttpServletRequest request,UserEntity user){
+    public String login(UserEntity user){
 //        //直接将业务逻辑在controller里面写了
 //        UserEntity userEntity = userJPA.findOne(new Specification<UserEntity>() {
 //            @Override

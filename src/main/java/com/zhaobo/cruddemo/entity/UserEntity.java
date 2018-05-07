@@ -10,8 +10,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "t_user")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class UserEntity implements Serializable {
 //加了(strategy = GenerationType.IDENTITY)
 //
