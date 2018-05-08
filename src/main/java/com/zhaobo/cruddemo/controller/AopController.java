@@ -1,6 +1,7 @@
 package com.zhaobo.cruddemo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AopController {
-    @GetMapping(value = "/aoptest")
-    public String aopTest(){
-        return "AOP test successfully!";
+    @GetMapping(value = "/aoptest/{test}")
+    public String aopTest(@PathVariable(value = "test") int test){
+        return "AOP "+String.valueOf(test)+" test successfully!";
     }
 }
